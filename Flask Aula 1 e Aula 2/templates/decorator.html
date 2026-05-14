@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Decorator em Python</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; }
+        pre { background: #f4f4f4; padding: 15px; border-left: 4px solid #3498db; }
+        code { background: #f4f4f4; padding: 2px 6px; }
+    </style>
+</head>
+<body>
+    <h1>O que é um Decorator em Python?</h1>
+    <p>Um <strong>decorator</strong> é uma função que envolve outra função para adicionar comportamentos extras sem modificar seu código original.</p>
+
+    <h2>Para que serve?</h2>
+    <p>Serve para reutilizar lógica comum entre funções, como autenticação, logs e controle de rotas.</p>
+
+    <h2>Como o Flask usa decorators?</h2>
+    <p>O Flask usa <code>@app.route</code> para associar uma URL a uma função Python:</p>
+    <pre>
+@app.route("/decorator")
+def decorator():
+    return "Esta função responde à rota /decorator"
+    </pre>
+</body>
+</html>

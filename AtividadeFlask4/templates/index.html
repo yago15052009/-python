@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belara | Architecture Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=Questrial&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ===== HEADER / HERO ===== -->
+  <header class="hero">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="logo.png.webp" alt="Belara">
+      </a>
+
+      <a href="tel:+10892733627" class="nav__phone">P: 10(89) 273 3627</a>
+
+      <a href="contact.html" class="btn btn--gold">Get Free Quote</a>
+
+      <!-- Hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav__toggle-input" aria-hidden="true">
+      <label for="nav-toggle" class="nav__hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Drawer -->
+      <div class="nav__drawer">
+        <label for="nav-toggle" class="nav__close" aria-label="Fechar menu">
+          <svg width="18" height="18" viewBox="0 0 17 17" fill="currentColor">
+            <path
+              d="M9.207 8.5l6.646 6.646-.707.707L8.5 9.207l-6.646 6.646-.707-.707L7.793 8.5 1.146 1.854l.707-.707L8.5 7.793l6.646-6.646.707.707L9.207 8.5z" />
+          </svg>
+        </label>
+        <ul class="nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pagina2.html">About</a></li>
+          <li><a href="pagina3.html">Services</a></li>
+        </ul>
+        <div class="nav__social">
+          <a href="#" aria-label="Facebook"><img src="facebook.svg" alt="Facebook"></a>
+          <a href="#" aria-label="Instagram"><img src="instagram.svg" alt="Instagram"></a>
+          <a href="#" aria-label="LinkedIn"><img src="linkedin.svg" alt="LinkedIn"></a>
+          <a href="#" aria-label="YouTube"><img src="youtube.svg" alt="YouTube"></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero__content container">
+      <span class="hero__location">Salt Lake City, United States</span>
+      <h1 class="hero__title">Homeownership<br>never looked so<br>affordable</h1>
+    </div>
+
+    <a href="https://youtu.be/up68UAfH0d0" class="hero__play" aria-label="Play reel">
+      <span class="hero__play-label">Play Reel</span>
+      <div class="hero__play-btn">
+        <img src="iconizer-control-play (1).svg" alt="" aria-hidden="true">
+      </div>
+    </a>
+
+    <div class="hero__banner">
+      <p>Homeownership never looked so affordable</p>
+      <p>World-class architecture design studio</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section container" id="about">
+      <h2 class="section__label">About Us</h2>
+      <div class="about__grid">
+        <div class="about__text">
+          <p class="about__quote">
+            "Belara is a multi-awards winning architectural and design studio operating in the field of interior design
+            and architecture.
+          </p>
+          <p class="about__body">
+            The studio offers tailor-made solutions for every project that has a unique identity according to its
+            context. Understanding the scope and the projects ambitions, and through listening to clients, users, and
+            contractors help us in creating well-conceived design solutions.
+          </p>
+          <a href="about.html" class="btn btn--outline">Learn More</a>
+        </div>
+        <div class="about__images">
+          <img src="about1.jpg" alt="About Belara" class="about__img about__img--1">
+          <img src="about2.jpg" alt="About Belara" class="about__img about__img--2">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services section container">
+      <h2 class="section__label">What We Do?</h2>
+      <div class="services__grid">
+        <article class="service-card">
+          <img src="blog1.jpg" alt="Commercial Architecture">
+          <div class="service-card__info">
+            <a href="#" class="service-card__title">Commercial</a>
+            <p class="service-card__sub">Architecture Design</p>
+          </div>
+          <a href="#" class="service-card__btn" aria-label="Ver Commercial">
+            <img src="arrow-right.png" alt="" aria-hidden="true">
+          </a>
+        </article>
+
+        <article class="service-card">
+          <img src="blog2.jpg" alt="Residential Architecture">
+          <div class="service-card__info">
+            <a href="#" class="service-card__title">Residential</a>
+            <p class="service-card__sub">Architecture Design</p>
+          </div>
+          <a href="#" class="service-card__btn" aria-label="Ver Residential">
+            <img src="arrow-right.png" alt="" aria-hidden="true">
+          </a>
+        </article>
+
+        <article class="service-card">
+          <img src="blog3.jpg" alt="Architecture">
+          <div class="service-card__info">
+            <a href="#" class="service-card__title">Architecture</a>
+            <p class="service-card__sub">Architecture Design</p>
+          </div>
+          <a href="#" class="service-card__btn" aria-label="Ver Architecture">
+            <img src="arrow-right.png" alt="" aria-hidden="true">
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <h2 class="projects__heading">Projects</h2>
+        <div class="projects__feature">
+          <img src="projects1.jpg" alt="Casa la Perla Nera" class="projects__img">
+          <div class="projects__card">
+            <h3>Casa la perla nera residential interior design</h3>
+            <p>Architecture Design</p>
+            <a href="#" class="projects__arrow" aria-label="Ver projeto">
+              <img src="iconizer-arrow-right.png" alt="" aria-hidden="true">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section class="whyus section container">
+      <div class="whyus__img-wrap">
+        <img src="about3.jpg" alt="Why Belara">
+      </div>
+      <div class="whyus__text">
+        <h2 class="section__label">Why Us?</h2>
+        <p>
+          Belara Nakameguro is located in a quiet location, a 6-minute walk from JR Nakameguro Station and a side street
+          from Komazawa Dori. It has 5 floors above ground, with office space.
+        </p>
+        <a href="#" class="btn btn--outline-gold">Learn More</a>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL ===== -->
+    <section class="testimonial section">
+      <div class="container testimonial__inner">
+        <img src="Sem título.png" alt="" class="testimonial__icon" aria-hidden="true">
+        <blockquote class="testimonial__quote">
+          "Belara is an office building brand that contributes to people's rich work life by providing creative office
+          space under the slogan 'A BASE FOR GOOD LIFE.'"
+        </blockquote>
+        <div class="testimonial__author">
+          <img src="founder-img.png" alt="Buck Kinnear">
+          <strong>Buck Kinnear &mdash; Creative Designer</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOG ===== -->
+    <section class="blog section container">
+      <article class="blog-card">
+        <img src="single-rooms1.jpg" alt="Blog 1" class="blog-card__img">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Architecture Design</span>
+          <h3 class="blog-card__title">Curating a workplace that inspires all of us</h3>
+          <time class="blog-card__date">12 Feb 2021</time>
+        </div>
+        <a href="#" class="blog-card__btn" aria-label="Ler artigo">
+          <img src="iconizer-arrow-right-_1_.png" alt="" aria-hidden="true">
+        </a>
+      </article>
+
+      <article class="blog-card">
+        <img src="single-rooms1.jpg" alt="Blog 2" class="blog-card__img">
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Architecture Design</span>
+          <h3 class="blog-card__title">Curating a workplace that inspires all of us</h3>
+          <time class="blog-card__date">12 Feb 2021</time>
+        </div>
+        <a href="#" class="blog-card__btn" aria-label="Ler artigo">
+          <img src="iconizer-arrow-right-_1_.png" alt="" aria-hidden="true">
+        </a>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logo.png (1).webp" alt="Belara">
+      </div>
+
+      <nav class="footer__nav" aria-label="Quick Links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Tips &amp; Tricks</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav" aria-label="Services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Submit Ticket</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe to get updates.</p>
+        <div class="footer__form">
+          <input type="email" placeholder="Your email" aria-label="Email">
+          <button type="submit" aria-label="Subscribe">
+            <img src="Icon-send.svg" alt="" aria-hidden="true">
+          </button>
+        </div>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="facebook.svg" alt="Facebook"></a>
+          <a href="#" aria-label="Instagram"><img src="instagram.svg" alt="Instagram"></a>
+          <a href="#" aria-label="LinkedIn"><img src="linkedin.svg" alt="LinkedIn"></a>
+          <a href="#" aria-label="YouTube"><img src="youtube.svg" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

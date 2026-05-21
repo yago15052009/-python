@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Exercício 5{% endblock %}
+
+{% block content %}
+    <h2>Exercício 5 - Condicional</h2>
+    <p>Nota: {{ nota }}</p>
+    {% if nota >= 7 %}
+        <p>Aprovado</p>
+    {% else %}
+        <p>Reprovado</p>
+    {% endif %}
+{% endblock %}

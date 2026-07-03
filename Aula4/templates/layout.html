@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block title %}{% endblock %} · SpaceFlask</title>
+</head>
+<body>
+
+    <div class="menu">
+        <div class="menu-logo">
+            <span>🪐</span>
+            SPACEFLASK
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">🚀 Missão</a></li>
+                <li><a href="{{ url_for('page1') }}">🐍 Python</a></li>
+                <li><a href="{{ url_for('page2') }}">⚗️ Flask</a></li>
+                <li><a href="{{ url_for('page3') }}">🎓 Estudante TI</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="conteudo">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

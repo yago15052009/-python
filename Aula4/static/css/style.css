@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    display: flex;
+    background: #0a0a1a;
+    color: #e0e0ff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Estrelas animadas no fundo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, white, transparent),
+        radial-gradient(1px 1px at 30% 60%, white, transparent),
+        radial-gradient(1px 1px at 50% 10%, white, transparent),
+        radial-gradient(1px 1px at 70% 80%, white, transparent),
+        radial-gradient(1px 1px at 90% 40%, white, transparent),
+        radial-gradient(1px 1px at 20% 90%, white, transparent),
+        radial-gradient(1px 1px at 60% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 15%, white, transparent),
+        radial-gradient(1px 1px at 40% 75%, white, transparent),
+        radial-gradient(1px 1px at 15% 45%, white, transparent),
+        radial-gradient(1px 1px at 55% 30%, white, transparent),
+        radial-gradient(1px 1px at 85% 65%, white, transparent),
+        radial-gradient(1px 1px at 25% 5%,  white, transparent),
+        radial-gradient(1px 1px at 95% 90%, white, transparent),
+        radial-gradient(1px 1px at 45% 95%, white, transparent);
+    animation: twinkle 4s infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes twinkle {
+    0%   { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* Menu lateral */
+.menu {
+    width: 220px;
+    background: linear-gradient(180deg, #0d0d2b 0%, #1a0533 100%);
+    padding: 30px 15px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid #4a00e0;
+    z-index: 1;
+    box-shadow: 4px 0 20px rgba(74, 0, 224, 0.4);
+}
+
+.menu-logo {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #a78bfa;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.menu-logo span {
+    display: block;
+    font-size: 2rem;
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.menu ul { list-style: none; }
+
+.menu ul li { margin: 8px 0; }
+
+.menu ul li a {
+    text-decoration: none;
+    color: #c4b5fd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.menu ul li a:hover {
+    background: rgba(167, 139, 250, 0.15);
+    border-color: #7c3aed;
+    color: #fff;
+    transform: translateX(5px);
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.5);
+}
+
+/* Conteúdo principal */
+.conteudo {
+    flex: 1;
+    padding: 50px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.conteudo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #a78bfa;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+}
+
+.conteudo h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #7c3aed;
+    margin: 25px 0 10px;
+}
+
+.conteudo p {
+    line-height: 1.8;
+    color: #c4b5fd;
+    max-width: 750px;
+    margin-bottom: 15px;
+}
+
+/* Card de destaque */
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid #4a00e0;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    max-width: 750px;
+    box-shadow: 0 0 25px rgba(74, 0, 224, 0.2);
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    background: #4a00e0;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Linha divisória */
+hr {
+    border: none;
+    border-top: 1px solid #2d1b69;
+    margin: 25px 0;
+}

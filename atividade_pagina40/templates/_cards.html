@@ -1,0 +1,37 @@
+{% set cores = {"pendente": "warning", "andamento": "primary", "concluida": "success"} %}
+{% set icones = {"pendente": "hourglass-split", "andamento": "arrow-repeat", "concluida": "check-circle-fill"} %}
+{% set labels = {"pendente": "Pendente", "andamento": "Em Andamento", "concluida": "Concluída"} %}
+
+{% if tarefas %}
+<div class="row g-3">
+  {% for t in tarefas %}
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 border-{{ cores.get(t.status, 'secondary') }} card-tarefa">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <h6 class="card-title mb-1">{{ t.titulo }}</h6>
+          <span class="badge bg-{{ cores.get(t.status, 'secondary') }}">
+            <i class="bi bi-{{ icones.get(t.status, 'circle') }}"></i>
+            {{ labels.get(t.status, t.status) }}
+          </span>
+        </div>
+        <p class="card-text text-muted small">{{ t.descricao or '' }}</p>
+      </div>
+      <div class="card-footer d-flex gap-2">
+        <a href="{{ url_for('editar', id=t.id) }}" class="btn btn-sm btn-outline-primary">
+          <i class="bi bi-pencil-fill"></i> Editar
+        </a>
+        <form method="post" action="{{ url_for('excluir', id=t.id) }}"
+              onsubmit="return confirm('Excluir esta tarefa?')">
+          <button class="btn btn-sm btn-outline-danger">
+            <i class="bi bi-trash-fill"></i> Excluir
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p class="text-muted">Nenhuma tarefa encontrada.</p>
+{% endif %}

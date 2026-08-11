@@ -1,0 +1,7 @@
+.card-tarefa {
+  transition: transform .15s, box-shadow .15s;
+}
+.card-tarefa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
